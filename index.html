@@ -286,46 +286,18 @@ header{background:var(--pine);color:var(--chalk);padding:0 20px;position:sticky;
 // ══════════════════════════════════════════════════
 //  ⚙️  COLLER ICI VOTRE URL APPS SCRIPT
 // ══════════════════════════════════════════════════
-const API_URL = 'https://script.google.com/macros/s/AKfycbysJrGaCkau3qQC7HrGf8ze0BBBTyiiHzCds6FQKxMIygdp4WvV3EuvpT-9ZLd8WGZh/exec';
+const API_URL = '/api'; // Proxié par Netlify → pas de CORS
 // ══════════════════════════════════════════════════
 
 let tousKits=[], tousUnitaires=[], kitActif=null, panier={}, haUrl='#';
 
-// ── Appel API — fetch avec fallback JSONP ──
+// ── Appel API via Netlify proxy (pas de CORS) ──
 async function callApi(url) {
-  // 1. Essai fetch (marche si CORS OK)
-  try {
-    const res = await fetch(url, { method: 'GET', redirect: 'follow' });
-    if (res.ok) {
-      const text = await res.text();
-      // Si la réponse est JSONP (callback(...)), extraire le JSON
-      const jsonpMatch = text.match(/^[^(]+\((.+)\)\s*;?\s*$/s);
-      return JSON.parse(jsonpMatch ? jsonpMatch[1] : text);
-    }
-  } catch(e) { /* fetch bloqué, on passe au JSONP */ }
-
-  // 2. Fallback JSONP (si fetch bloqué par CORS)
-  return new Promise((resolve, reject) => {
-    const cbName = '__cb' + Date.now() + Math.floor(Math.random()*1000);
-    const script = document.createElement('script');
-    const timer  = setTimeout(() => {
-      cleanup();
-      reject(new Error('Timeout — vérifiez que l\'URL Apps Script est correcte et redéployée'));
-    }, 15000);
-    function cleanup() {
-      clearTimeout(timer);
-      delete window[cbName];
-      if (script.parentNode) script.parentNode.removeChild(script);
-    }
-    window[cbName] = (data) => { cleanup(); resolve(data); };
-    script.onerror = () => { cleanup(); reject(new Error('Impossible de joindre l\'API — vérifiez l\'URL et le déploiement Apps Script')); };
-    const sep = url.includes('?') ? '&' : '?';
-    script.src = url + sep + 'callback=' + cbName;
-    document.head.appendChild(script);
-  });
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('Erreur HTTP ' + res.status);
+  return await res.json();
 }
 
-// Alias
 function jsonp(url) { return callApi(url); }
 
 // ── Chargement initial ────────────────────────────
