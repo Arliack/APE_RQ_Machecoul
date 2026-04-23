@@ -35,8 +35,6 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--fb);background:var(--paper);color:var(--ink);min-height:100vh}
-
-/* ── Header ── */
 header{background:var(--pine);color:var(--chalk);padding:0 20px;position:sticky;top:0;z-index:200;box-shadow:0 1px 8px rgba(0,0,0,.2)}
 .hd{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0;flex-wrap:wrap}
 .hd-brand{display:flex;align-items:center;gap:8px}
@@ -44,20 +42,14 @@ header{background:var(--pine);color:var(--chalk);padding:0 20px;position:sticky;
 .hd-brand .sub{font-size:.65rem;opacity:.6;letter-spacing:.05em;text-transform:uppercase}
 .cart-btn-mobile{display:none;align-items:center;gap:5px;background:var(--amber);color:var(--ink);font-family:var(--fb);font-size:.78rem;font-weight:600;padding:6px 12px;border-radius:var(--pill);border:none;cursor:pointer}
 .cart-badge{background:var(--red);color:#fff;font-size:.6rem;font-weight:700;border-radius:var(--pill);padding:1px 5px;display:none}
-
-/* ── Layout ── */
 .main-layout{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr var(--cart-w);align-items:start}
 .content-col{border-right:1px solid var(--border);min-height:80vh}
-
-/* ── Sections ── */
 .section-bloc{padding:22px 22px 0}
 .section-hd{display:flex;align-items:center;gap:9px;margin-bottom:12px}
 .section-num{width:22px;height:22px;border-radius:50%;background:var(--pine);color:var(--chalk);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0}
 .section-hd h2{font-family:var(--fd);font-size:1rem;font-weight:700}
 .section-sub{font-size:.8rem;color:var(--muted);margin-bottom:14px;line-height:1.5}
 .divider{height:1px;background:var(--border);margin:18px 22px}
-
-/* ── Grille classes ── */
 .classes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:16px}
 .kit-section-label{grid-column:1/-1;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);padding:4px 0 0;display:flex;align-items:center;gap:8px}
 .kit-section-label::after{content:"";flex:1;height:1px;background:var(--border)}
@@ -66,8 +58,6 @@ header{background:var(--pine);color:var(--chalk);padding:0 20px;position:sticky;
 .classe-btn.actif{background:var(--pine);border-color:var(--pine);color:var(--chalk);box-shadow:0 3px 10px rgba(42,92,69,.28)}
 .cn{font-size:.9rem;font-weight:700}
 .cs{font-size:.62rem;opacity:.8;font-weight:400}
-
-/* ── Kit panel ── */
 .kit-panel{background:var(--chalk);border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:6px;animation:up .2s ease}
 @keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .kit-top{background:linear-gradient(135deg,var(--pine),var(--pine-dk));color:var(--chalk);padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
@@ -93,8 +83,6 @@ header{background:var(--pine);color:var(--chalk);padding:0 20px;position:sticky;
 .btn-add-kit{display:inline-flex;align-items:center;gap:5px;background:var(--amber);color:var(--ink);font-family:var(--fb);font-size:.82rem;font-weight:700;padding:8px 16px;border-radius:var(--pill);border:none;cursor:pointer;box-shadow:0 2px 8px rgba(232,169,48,.3);transition:background .14s,transform .1s}
 .btn-add-kit:hover{background:var(--amber-dk);transform:translateY(-1px)}
 .btn-add-kit.done{background:var(--pine);color:var(--chalk)}
-
-/* ── Articles unitaires ── */
 .matiere-section{padding:0 22px 20px}
 .matiere-label{font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:16px 0 9px;display:flex;align-items:center;gap:8px}
 .matiere-label::after{content:'';flex:1;height:1px;background:var(--border)}
@@ -115,8 +103,6 @@ header{background:var(--pine);color:var(--chalk);padding:0 20px;position:sticky;
 .qty-val{width:26px;text-align:center;font-size:.78rem;font-weight:700;border:none;outline:none;background:transparent;pointer-events:none}
 .btn-plus{display:inline-flex;align-items:center;gap:3px;background:var(--pine);color:var(--chalk);font-family:var(--fb);font-size:.72rem;font-weight:600;padding:5px 10px;border-radius:var(--pill);border:none;cursor:pointer;transition:background .12s}
 .btn-plus:hover{background:var(--pine-lt)}
-
-/* ── Panier sidebar ── */
 .panier-col{position:sticky;top:46px;padding:18px 14px;display:flex;flex-direction:column}
 .panier-box{background:var(--chalk);border-radius:var(--r);border:1.5px solid var(--border);box-shadow:var(--sh);overflow:hidden}
 .panier-hd{background:var(--pine);color:var(--chalk);padding:11px 14px;display:flex;align-items:center;justify-content:space-between}
@@ -142,8 +128,6 @@ header{background:var(--pine);color:var(--chalk);padding:0 20px;position:sticky;
 .btn-valider{width:100%;height:46px;background:var(--amber);color:var(--ink);font-family:var(--fb);font-size:.88rem;font-weight:700;border-radius:var(--pill);border:none;cursor:pointer;box-shadow:0 2px 8px rgba(232,169,48,.28);transition:background .14s,transform .1s}
 .btn-valider:hover{background:var(--amber-dk);transform:translateY(-1px)}
 .btn-valider:disabled{background:var(--border);color:var(--muted);cursor:not-allowed;transform:none;box-shadow:none}
-
-/* ── Modal ── */
 .overlay{position:fixed;inset:0;background:rgba(28,43,58,.65);backdrop-filter:blur(4px);z-index:500;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .22s}
 .overlay.visible{opacity:1;pointer-events:all}
 .modal{background:var(--chalk);border-radius:18px;width:100%;max-width:420px;box-shadow:0 20px 60px rgba(28,43,58,.25);overflow:hidden;transform:translateY(14px) scale(.97);transition:transform .22s}
@@ -167,8 +151,6 @@ header{background:var(--pine);color:var(--chalk);padding:0 20px;position:sticky;
 .btn-annul{flex:1;height:44px;border:1.5px solid var(--border);background:var(--chalk);border-radius:var(--pill);font-family:var(--fb);font-size:.85rem;font-weight:600;color:var(--muted);cursor:pointer}
 .btn-confirm{flex:2;height:44px;background:var(--pine);color:var(--chalk);border:none;border-radius:var(--pill);font-family:var(--fb);font-size:.85rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px}
 .btn-confirm:disabled{background:var(--border);color:var(--muted);cursor:wait}
-
-/* ── Écran confirmation ── */
 .ecran{position:fixed;inset:0;background:var(--paper);z-index:600;display:flex;align-items:center;justify-content:center;padding:24px;overflow-y:auto;opacity:0;pointer-events:none;transition:opacity .25s}
 .ecran.visible{opacity:1;pointer-events:all}
 .ecran-card{background:var(--chalk);border-radius:22px;max-width:480px;width:100%;box-shadow:var(--sh-lg);overflow:hidden;transform:translateY(20px);transition:transform .3s}
@@ -190,14 +172,10 @@ header{background:var(--pine);color:var(--chalk);padding:0 20px;position:sticky;
 .btn-ha{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:50px;background:var(--amber);color:var(--ink);font-family:var(--fb);font-size:.93rem;font-weight:700;border-radius:var(--pill);text-decoration:none;box-shadow:0 4px 16px rgba(232,169,48,.4);margin-bottom:10px;transition:background .14s}
 .btn-ha:hover{background:var(--amber-dk)}
 .btn-reset{display:block;width:100%;height:44px;background:none;border:1.5px solid var(--border);border-radius:var(--pill);font-family:var(--fb);font-size:.83rem;color:var(--muted);cursor:pointer}
-
-/* ── States ── */
 .loading{text-align:center;padding:36px 20px;color:var(--muted)}
 .spinner{width:34px;height:34px;border:3px solid var(--border);border-top-color:var(--pine);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 12px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .errtxt{text-align:center;padding:24px;color:var(--muted);font-size:.85rem}
-
-/* ── Responsive ── */
 @media(max-width:840px){
   :root{--cart-w:0px}
   .main-layout{grid-template-columns:1fr}
@@ -252,7 +230,6 @@ header{background:var(--pine);color:var(--chalk);padding:0 20px;position:sticky;
     </div>
     <div style="height:16px"></div>
   </div>
-
   <aside class="panier-col" id="panierCol">
     <div class="panier-box">
       <div class="panier-hd">
@@ -266,7 +243,6 @@ header{background:var(--pine);color:var(--chalk);padding:0 20px;position:sticky;
   </aside>
 </div>
 
-<!-- Modal -->
 <div class="overlay" id="overlayModal">
   <div class="modal">
     <div class="modal-hd"><h3>📋 Vos coordonnées</h3><p>Pour finaliser et enregistrer votre commande</p></div>
@@ -286,7 +262,6 @@ header{background:var(--pine);color:var(--chalk);padding:0 20px;position:sticky;
   </div>
 </div>
 
-<!-- Confirmation -->
 <div class="ecran" id="ecran">
   <div class="ecran-card">
     <div class="ecran-hd">
@@ -308,41 +283,55 @@ header{background:var(--pine);color:var(--chalk);padding:0 20px;position:sticky;
 </div>
 
 <script>
-// ════════════════════════════════════════════════════════
-//  ⚙️  CONFIGURATION — À MODIFIER AVEC VOTRE URL
-//  Collez ici l'URL de déploiement Apps Script
-// ════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
+//  ⚙️  COLLER ICI VOTRE URL APPS SCRIPT
+// ══════════════════════════════════════════════════
 const API_URL = 'https://script.google.com/macros/s/AKfycbysJrGaCkau3qQC7HrGf8ze0BBBTyiiHzCds6FQKxMIygdp4WvV3EuvpT-9ZLd8WGZh/exec';
-// Exemple :
-// const API_URL = 'https://script.google.com/macros/s/AKfycb.../exec';
-// ════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
 
 let tousKits=[], tousUnitaires=[], kitActif=null, panier={}, haUrl='#';
 
-// ── Chargement initial ────────────────────────────────────
+// ── JSONP — contourne le CORS sur iOS et tous navigateurs ──
+function jsonp(url) {
+  return new Promise((resolve, reject) => {
+    const cbName = '__cb' + Date.now() + Math.floor(Math.random()*1000);
+    const script = document.createElement('script');
+    const timer  = setTimeout(() => {
+      cleanup();
+      reject(new Error('Timeout — vérifiez l\'URL de l\'API'));
+    }, 15000);
+
+    function cleanup() {
+      clearTimeout(timer);
+      delete window[cbName];
+      if (script.parentNode) script.parentNode.removeChild(script);
+    }
+
+    window[cbName] = (data) => { cleanup(); resolve(data); };
+    script.onerror = () => { cleanup(); reject(new Error('Erreur réseau — vérifiez l\'URL de l\'API')); };
+    script.src = url + (url.includes('?') ? '&' : '?') + 'callback=' + cbName;
+    document.head.appendChild(script);
+  });
+}
+
+// ── Chargement initial ────────────────────────────
 async function charger() {
   try {
-    const res  = await fetch(API_URL + '?action=getData');
-    const data = await res.json();
-
+    const data = await jsonp(API_URL + '?action=getData');
     if (data.error) { showErr(data.error); return; }
 
-    // Config
     const c = data.config || {};
     document.getElementById('nomAssoc').textContent = (c.nom_association||'APE') + ' — Kit de Rentrée';
     if (c.annee) document.getElementById('anneeLabel').textContent = 'Rentrée ' + c.annee;
     haUrl = c.helloasso_url || '#';
     document.getElementById('confLienHA').href = haUrl;
 
-    // Données
     tousKits      = data.kits      || [];
     tousUnitaires = data.unitaires || [];
     renderClasses();
     renderUnitaires();
-
   } catch(e) {
-    showErr('Impossible de charger les données. Vérifiez l\'URL de l\'API.');
-    console.error(e);
+    showErr(e.message || 'Impossible de charger les données.');
   }
 }
 charger();
@@ -352,7 +341,7 @@ function showErr(msg) {
   document.getElementById('unitairesZone').innerHTML = '';
 }
 
-// ── Classes ───────────────────────────────────────────────
+// ── Classes ───────────────────────────────────────
 function renderClasses() {
   const g = document.getElementById('classesGrid');
   g.innerHTML = '';
@@ -393,10 +382,7 @@ function renderKitPanel() {
     <div class="kit-panel">
       <div class="kit-top">
         <div class="kit-top-nom">📦 ${esc(k.nom)}</div>
-        <div class="kit-prix-bloc">
-          <div class="kit-prix-label">Prix groupé</div>
-          <div class="kit-prix-val">${k.prix!==null?fmt(k.prix)+' €':'—'}</div>
-        </div>
+        <div class="kit-prix-bloc"><div class="kit-prix-label">Prix groupé</div><div class="kit-prix-val">${k.prix!==null?fmt(k.prix)+' €':'—'}</div></div>
       </div>
       <div class="kit-table-wrap"><table class="kit-table">
         <thead><tr><th>Matière</th><th>Article</th><th>Qté</th></tr></thead>
@@ -405,156 +391,128 @@ function renderKitPanel() {
       <div class="kit-footer">
         <span class="kit-count">${k.articles.length} article(s)</span>
         ${k.prix!==null
-          ? `<button class="btn-add-kit" id="btnAddKit" onclick="ajouterKit(${kitActif})">🛒 Ajouter ce kit</button>`
-          : '<span style="font-size:.74rem;color:var(--muted)">Prix à confirmer</span>'}
+          ?`<button class="btn-add-kit" id="btnAddKit" onclick="ajouterKit(${kitActif})">🛒 Ajouter ce kit</button>`
+          :'<span style="font-size:.74rem;color:var(--muted)">Prix à confirmer</span>'}
       </div>
     </div>`;
 }
 
 function ajouterKit(idx) {
-  const k = tousKits[idx];
-  const key = 'kit_' + idx;
-  if (panier[key]) panier[key].qty++;
-  else panier[key] = { label: k.nom, prixUnit: k.prix, qty: 1, type: 'kit' };
+  const k = tousKits[idx], key = 'kit_'+idx;
+  if(panier[key]) panier[key].qty++; else panier[key]={label:k.nom,prixUnit:k.prix,qty:1,type:'kit'};
   renderPanier();
   const btn = document.getElementById('btnAddKit');
-  if (btn) {
-    btn.textContent = '✓ Ajouté !'; btn.classList.add('done');
-    setTimeout(() => { btn.textContent = '🛒 Ajouter ce kit'; btn.classList.remove('done'); }, 1400);
-  }
+  if(btn){btn.textContent='✓ Ajouté !';btn.classList.add('done');setTimeout(()=>{btn.textContent='🛒 Ajouter ce kit';btn.classList.remove('done')},1400)}
 }
 
-// ── Articles unitaires ────────────────────────────────────
+// ── Articles unitaires ────────────────────────────
 function renderUnitaires() {
   const zone = document.getElementById('unitairesZone');
-  if (!tousUnitaires.length) { zone.innerHTML = '<div class="errtxt">Aucun article unitaire.</div>'; return; }
-  const groupes = {};
-  tousUnitaires.forEach(a => { const g = a.matiere||'Divers'; if(!groupes[g]) groupes[g]=[]; groupes[g].push(a); });
-  let html = '<div class="matiere-section">';
-  Object.entries(groupes).forEach(([mat, arts]) => {
-    html += `<div class="matiere-label">${esc(mat)}</div><div class="unitaires-grid">`;
-    html += arts.map(carteUnit).join('');
-    html += '</div>';
+  if(!tousUnitaires.length){zone.innerHTML='<div class="errtxt">Aucun article unitaire.</div>';return}
+  const groupes={};
+  tousUnitaires.forEach(a=>{const g=a.matiere||'Divers';if(!groupes[g])groupes[g]=[];groupes[g].push(a)});
+  let html='<div class="matiere-section">';
+  Object.entries(groupes).forEach(([mat,arts])=>{
+    html+=`<div class="matiere-label">${esc(mat)}</div><div class="unitaires-grid">`;
+    html+=arts.map(carteUnit).join('');
+    html+='</div>';
   });
-  html += '</div>';
-  zone.innerHTML = html;
+  zone.innerHTML=html+'</div>';
 }
 
 function carteUnit(p) {
-  const qty = panier[p.id] ? panier[p.id].qty : 0;
-  const imgH = p.image
-    ? `<img class="carte-img" src="${esc(p.image)}" alt="${esc(p.nom)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="carte-img-ph" style="display:none">📦</div>`
-    : `<div class="carte-img-ph">📦</div>`;
-  const prixH = p.prix!==null ? `<div class="carte-prix">${fmt(p.prix)} € <small>/u</small></div>` : `<div class="carte-prix-nd">Sur devis</div>`;
-  const ctrlH = qty===0
-    ? `<button class="btn-plus" onclick="addUnit('${p.id}')">+ Ajouter</button>`
-    : `<div class="qty-ctrl"><button class="qty-btn" onclick="decUnit('${p.id}')">−</button><span class="qty-val">${qty}</span><button class="qty-btn" onclick="addUnit('${p.id}')">+</button></div>`;
+  const qty=panier[p.id]?panier[p.id].qty:0;
+  const imgH=p.image
+    ?`<img class="carte-img" src="${esc(p.image)}" alt="${esc(p.nom)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="carte-img-ph" style="display:none">📦</div>`
+    :`<div class="carte-img-ph">📦</div>`;
+  const prixH=p.prix!==null?`<div class="carte-prix">${fmt(p.prix)} € <small>/u</small></div>`:`<div class="carte-prix-nd">Sur devis</div>`;
+  const ctrlH=qty===0
+    ?`<button class="btn-plus" onclick="addUnit('${p.id}')">+ Ajouter</button>`
+    :`<div class="qty-ctrl"><button class="qty-btn" onclick="decUnit('${p.id}')">−</button><span class="qty-val">${qty}</span><button class="qty-btn" onclick="addUnit('${p.id}')">+</button></div>`;
   return `<article class="carte">${imgH}<div class="carte-body"><div class="carte-nom">${esc(p.nom)}</div><div class="carte-bas">${prixH}<div id="ctrl-${p.id}">${ctrlH}</div></div></div></article>`;
 }
 
-function addUnit(id) {
-  const p = tousUnitaires.find(x => x.id===id); if(!p) return;
-  if(panier[id]) panier[id].qty++; else panier[id]={label:p.nom,prixUnit:p.prix,qty:1,type:'unit'};
-  refreshCtrl(id); renderPanier();
-}
-function decUnit(id) {
-  if(!panier[id]) return; panier[id].qty--; if(panier[id].qty<=0) delete panier[id];
-  refreshCtrl(id); renderPanier();
-}
-function refreshCtrl(id) {
-  const el = document.getElementById('ctrl-'+id); if(!el) return;
-  const qty = panier[id] ? panier[id].qty : 0;
-  el.innerHTML = qty===0
-    ? `<button class="btn-plus" onclick="addUnit('${id}')">+ Ajouter</button>`
-    : `<div class="qty-ctrl"><button class="qty-btn" onclick="decUnit('${id}')">−</button><span class="qty-val">${qty}</span><button class="qty-btn" onclick="addUnit('${id}')">+</button></div>`;
+function addUnit(id){const p=tousUnitaires.find(x=>x.id===id);if(!p)return;if(panier[id])panier[id].qty++;else panier[id]={label:p.nom,prixUnit:p.prix,qty:1,type:'unit'};refreshCtrl(id);renderPanier()}
+function decUnit(id){if(!panier[id])return;panier[id].qty--;if(panier[id].qty<=0)delete panier[id];refreshCtrl(id);renderPanier()}
+function refreshCtrl(id){
+  const el=document.getElementById('ctrl-'+id);if(!el)return;
+  const qty=panier[id]?panier[id].qty:0;
+  el.innerHTML=qty===0
+    ?`<button class="btn-plus" onclick="addUnit('${id}')">+ Ajouter</button>`
+    :`<div class="qty-ctrl"><button class="qty-btn" onclick="decUnit('${id}')">−</button><span class="qty-val">${qty}</span><button class="qty-btn" onclick="addUnit('${id}')">+</button></div>`;
 }
 
-// ── Panier ────────────────────────────────────────────────
-function renderPanier() {
-  const items = Object.entries(panier);
-  const total = calcTotal();
-  const count = items.reduce((s,[,v]) => s+v.qty, 0);
-  const badge = document.getElementById('mobileBadge');
-  badge.style.display = count ? 'inline' : 'none'; badge.textContent = count;
-  document.getElementById('panierCnt').textContent = count;
-  const cont = document.getElementById('panierContenu');
-  if (!items.length) { cont.innerHTML='<div class="panier-vide"><div class="icon">🛍️</div><p>Ajoutez un kit<br>ou des articles</p></div>'; return; }
-  const lignes = items.map(([k,v]) => {
-    const st = v.prixUnit!==null ? v.prixUnit*v.qty : null;
+// ── Panier ────────────────────────────────────────
+function renderPanier(){
+  const items=Object.entries(panier);
+  const total=calcTotal();
+  const count=items.reduce((s,[,v])=>s+v.qty,0);
+  const badge=document.getElementById('mobileBadge');
+  badge.style.display=count?'inline':'none';badge.textContent=count;
+  document.getElementById('panierCnt').textContent=count;
+  const cont=document.getElementById('panierContenu');
+  if(!items.length){cont.innerHTML='<div class="panier-vide"><div class="icon">🛍️</div><p>Ajoutez un kit<br>ou des articles</p></div>';return}
+  const lignes=items.map(([k,v])=>{
+    const st=v.prixUnit!==null?v.prixUnit*v.qty:null;
     return `<div class="pitem"><div class="pitem-info"><div class="pitem-nom">${esc(v.label)}</div><div class="pitem-det">${v.qty}× ${v.prixUnit!==null?fmt(v.prixUnit)+'€':'devis'}</div></div>${st!==null?`<div class="pitem-st">${fmt(st)} €</div>`:''}<button class="pitem-del" onclick="delItem('${k}')">✕</button></div>`;
   }).join('');
-  cont.innerHTML = `<div class="panier-liste">${lignes}</div><div class="panier-footer"><div class="panier-total-row"><span class="panier-total-lbl">Total estimé</span><span class="panier-total-val">${fmt(total)} €</span></div><button class="btn-valider" onclick="ouvrirModal()">✓ Valider ma commande</button></div>`;
+  cont.innerHTML=`<div class="panier-liste">${lignes}</div><div class="panier-footer"><div class="panier-total-row"><span class="panier-total-lbl">Total estimé</span><span class="panier-total-val">${fmt(total)} €</span></div><button class="btn-valider" onclick="ouvrirModal()">✓ Valider ma commande</button></div>`;
 }
-function delItem(key) { if(panier[key]?.type==='unit') refreshCtrl(key); delete panier[key]; renderPanier(); }
-function calcTotal() { return Object.values(panier).reduce((s,v) => s+(v.prixUnit!==null?v.prixUnit*v.qty:0), 0); }
-function togglePanier() { document.getElementById('panierCol').classList.toggle('open'); }
+function delItem(key){if(panier[key]?.type==='unit')refreshCtrl(key);delete panier[key];renderPanier()}
+function calcTotal(){return Object.values(panier).reduce((s,v)=>s+(v.prixUnit!==null?v.prixUnit*v.qty:0),0)}
+function togglePanier(){document.getElementById('panierCol').classList.toggle('open')}
 
-// ── Modal ─────────────────────────────────────────────────
-function ouvrirModal() {
-  if (!Object.keys(panier).length) return;
-  const lignes = Object.values(panier).map(v => `${v.qty}× ${v.label}${v.prixUnit!==null?' — '+fmt(v.prixUnit*v.qty)+' €':''}`).join('<br>');
-  document.getElementById('modalRecap').innerHTML = `<div class="recap-titre">Récapitulatif</div><div>${lignes}</div><div class="recap-total"><span>Total</span><span>${fmt(calcTotal())} €</span></div>`;
+// ── Modal ─────────────────────────────────────────
+function ouvrirModal(){
+  if(!Object.keys(panier).length)return;
+  const lignes=Object.values(panier).map(v=>`${v.qty}× ${v.label}${v.prixUnit!==null?' — '+fmt(v.prixUnit*v.qty)+' €':''}`).join('<br>');
+  document.getElementById('modalRecap').innerHTML=`<div class="recap-titre">Récapitulatif</div><div>${lignes}</div><div class="recap-total"><span>Total</span><span>${fmt(calcTotal())} €</span></div>`;
   document.getElementById('overlayModal').classList.add('visible');
-  setTimeout(() => document.getElementById('fNom').focus(), 300);
+  setTimeout(()=>document.getElementById('fNom').focus(),300);
 }
-function fermerModal() { document.getElementById('overlayModal').classList.remove('visible'); }
-document.getElementById('overlayModal').addEventListener('click', e => { if(e.target===document.getElementById('overlayModal')) fermerModal(); });
+function fermerModal(){document.getElementById('overlayModal').classList.remove('visible')}
+document.getElementById('overlayModal').addEventListener('click',e=>{if(e.target===document.getElementById('overlayModal'))fermerModal()});
 
-// ── Validation ────────────────────────────────────────────
-async function soumettre() {
-  let ok = true;
-  ['fNom','fPrenom','fEmail','fTel'].forEach(id => {
-    const el = document.getElementById(id);
-    if (!el.value.trim()) { el.classList.add('err'); ok=false; } else el.classList.remove('err');
+// ── Validation ────────────────────────────────────
+async function soumettre(){
+  let ok=true;
+  ['fNom','fPrenom','fEmail','fTel'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(!el.value.trim()){el.classList.add('err');ok=false}else el.classList.remove('err');
   });
-  if (!ok) return;
-
-  const btn = document.getElementById('btnConf');
-  btn.disabled = true; btn.textContent = '⏳ Enregistrement…';
-
-  const commande = {
-    famille:   document.getElementById('fNom').value.trim(),
-    contact:   document.getElementById('fPrenom').value.trim(),
-    email:     document.getElementById('fEmail').value.trim(),
-    telephone: document.getElementById('fTel').value.trim(),
-    total:     calcTotal(),
-    articles:  Object.values(panier).map(v => ({
-      nom: v.label, quantite: v.qty,
-      prixUnitaire: v.prixUnit,
-      sousTotal: v.prixUnit!==null ? v.prixUnit*v.qty : null,
-    })),
+  if(!ok)return;
+  const btn=document.getElementById('btnConf');
+  btn.disabled=true;btn.textContent='⏳ Enregistrement…';
+  const commande={
+    famille:document.getElementById('fNom').value.trim(),
+    contact:document.getElementById('fPrenom').value.trim(),
+    email:document.getElementById('fEmail').value.trim(),
+    telephone:document.getElementById('fTel').value.trim(),
+    total:calcTotal(),
+    articles:Object.values(panier).map(v=>({nom:v.label,quantite:v.qty,prixUnitaire:v.prixUnit,sousTotal:v.prixUnit!==null?v.prixUnit*v.qty:null})),
   };
-
   try {
-    const url = API_URL + '?action=commande&data=' + encodeURIComponent(JSON.stringify(commande));
-    const res  = await fetch(url);
-    const data = await res.json();
-    btn.disabled = false; btn.textContent = '✓ Valider la commande';
-    if (data.succes) afficherConf(commande.total);
-    else alert('Erreur : ' + (data.message || "Impossible d'enregistrer."));
-  } catch(e) {
-    btn.disabled = false; btn.textContent = '✓ Valider la commande';
-    alert('Erreur réseau : ' + e.message);
+    const url=API_URL+'?action=commande&data='+encodeURIComponent(JSON.stringify(commande));
+    const res=await jsonp(url);
+    btn.disabled=false;btn.textContent='✓ Valider la commande';
+    if(res.succes)afficherConf(commande.total);
+    else alert('Erreur : '+(res.message||"Impossible d'enregistrer."));
+  }catch(e){
+    btn.disabled=false;btn.textContent='✓ Valider la commande';
+    alert('Erreur : '+e.message);
   }
 }
-
-function afficherConf(total) {
-  fermerModal();
-  document.getElementById('confMontant').textContent = fmt(total) + ' €';
-  document.getElementById('confLienHA').href = haUrl;
-  document.getElementById('ecran').classList.add('visible');
-}
-function nouvelleCommande() {
-  panier = {}; kitActif = null;
+function afficherConf(total){fermerModal();document.getElementById('confMontant').textContent=fmt(total)+' €';document.getElementById('confLienHA').href=haUrl;document.getElementById('ecran').classList.add('visible')}
+function nouvelleCommande(){
+  panier={};kitActif=null;
   document.getElementById('ecran').classList.remove('visible');
-  ['fNom','fPrenom','fEmail','fTel'].forEach(id => document.getElementById(id).value='');
-  document.querySelectorAll('.classe-btn').forEach(b => b.classList.remove('actif'));
-  document.getElementById('kitPanel').innerHTML = '';
-  renderUnitaires(); renderPanier();
+  ['fNom','fPrenom','fEmail','fTel'].forEach(id=>document.getElementById(id).value='');
+  document.querySelectorAll('.classe-btn').forEach(b=>b.classList.remove('actif'));
+  document.getElementById('kitPanel').innerHTML='';
+  renderUnitaires();renderPanier();
 }
-
-const fmt = n => (n||0).toFixed(2).replace('.',',');
-const esc = s => String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=n=>(n||0).toFixed(2).replace('.',',');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 </script>
 </body>
 </html>
