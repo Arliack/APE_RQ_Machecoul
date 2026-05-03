@@ -441,14 +441,24 @@ header {
 .modal {
   background: var(--chalk); border-radius: 18px;
   width: 100%; max-width: 640px;
+  max-height: 92vh;                          /* ne dépasse jamais l'écran */
+  display: flex; flex-direction: column;     /* header fixe + body scroll + footer fixe */
   box-shadow: 0 20px 60px rgba(28,43,58,.25); overflow: hidden;
   transform: translateY(14px) scale(.97); transition: transform .22s;
 }
 .overlay.visible .modal { transform: none }
-.modal-hd { background: var(--pine); color: var(--chalk); padding: 20px 28px }
+.modal-hd {
+  background: var(--pine); color: var(--chalk); padding: 20px 28px;
+  flex-shrink: 0;  /* le header ne rétrécit jamais */
+}
 .modal-hd h3 { font-family: var(--fd); font-size: 1.15rem; font-weight: 700 }
 .modal-hd p { font-size: .78rem; opacity: .78; margin-top: 3px }
-.modal-body { padding: 24px 28px }
+.modal-body {
+  padding: 24px 28px;
+  overflow-y: auto;          /* scroll uniquement dans le body */
+  flex: 1;                   /* prend tout l'espace disponible */
+  -webkit-overflow-scrolling: touch;
+}
 .modal-recap {
   background: var(--paper); border: 1px solid var(--border);
   border-radius: var(--r-sm); padding: 12px 14px; margin-bottom: 16px;
@@ -470,7 +480,7 @@ header {
 }
 .fg input:focus { border-color: var(--pine); background: var(--chalk) }
 .fg input.err { border-color: var(--red) }
-.modal-actions { display: flex; gap: 12px; padding: 0 28px 28px }
+.modal-actions { display: flex; gap: 12px; padding: 16px 28px 28px; flex-shrink: 0; border-top: 1px solid var(--border); background: var(--chalk) }
 .btn-annul {
   flex: 1; height: 52px;
   border: 1.5px solid var(--border); background: var(--chalk);
@@ -609,10 +619,10 @@ header {
 
   /* Modal : full-width sur mobile */
   .overlay { padding: 12px }
-  .modal { max-width: 100%; border-radius: 16px }
+  .modal { max-width: 100%; border-radius: 16px; max-height: 95vh }
   .modal-hd { padding: 16px 18px }
   .modal-body { padding: 16px 18px }
-  .modal-actions { padding: 0 18px 18px }
+  .modal-actions { padding: 12px 18px 18px }
   .form-grid { grid-template-columns: 1fr 1fr; gap: 10px }
 }
 
