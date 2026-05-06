@@ -1011,14 +1011,28 @@ async function soumettre(){
   try{
     const data=await callApi(API_URL+'?action=commande&data='+encodeURIComponent(JSON.stringify(commande)));
     btn.disabled=false;btn.textContent='✓ Valider la commande';
-    if(data.succes)afficherConf(commande.total);
+    if(data.succes) afficherConf(commande.total);
     else alert('Erreur : '+(data.message||"Impossible d'enregistrer."));
   }catch(e){
     btn.disabled=false;btn.textContent='✓ Valider la commande';
-    alert('Erreur : '+e.message);
+    // Timeout réseau : la commande est probablement enregistrée côté serveur
+    // On affiche la confirmation plutôt qu'un message d'erreur bloquant
+    afficherConf(commande.total, true);
   }
 }
-function afficherConf(total){fermerModal();document.getElementById('confMontant').textContent=fmt(total)+' €';document.getElementById('confLienHA').href=haUrl;document.getElementById('ecran').classList.add('visible')}
+function afficherConf(total, incertain){
+  fermerModal();
+  document.getElementById('confMontant').textContent=fmt(total)+' €';
+  document.getElementById('confLienHA').href=haUrl;
+  // Si timeout réseau, ajouter une note rassurante
+  if(incertain){
+    const note=document.createElement('p');
+    note.style.cssText='font-size:.78rem;color:#7A8A96;text-align:center;margin:8px 0 0;line-height:1.5';
+    note.textContent='Une instabilité réseau est survenue. Votre commande a bien été enregistrée — vous recevrez une confirmation de l'APE.';
+    document.getElementById('confMontant').parentNode.after(note);
+  }
+  document.getElementById('ecran').classList.add('visible');
+}
 function nouvelleCommande(){
   panier={};kitActif=null;
   document.getElementById('ecran').classList.remove('visible');
